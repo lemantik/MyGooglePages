@@ -1,0 +1,23 @@
+#ignore files and directories
+#
+/.git/*
+
+/build/
+/target/
+*.log
+
+### Gradle ###
+.gradle
+*.iml___jb_tmp___
+out
+
+### Drivers ###
+/drivers/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.exe
+*.java___jb_tmp___
