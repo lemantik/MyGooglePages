@@ -2,9 +2,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.nio.file.Paths;
+import java.net.URL;
+//import java.nio.file.Paths;
 
 public class testGooglePage {
 
@@ -12,10 +15,16 @@ public class testGooglePage {
 
     @Before
     public void setUp(){
-        //System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");
-        String pathToChromeDriver = Paths.get(".\\drivers\\chromedriver.exe").toAbsolutePath().toString();
+
+        DesiredCapabilities capability = DesiredCapabilities.chrome();
+        WebDriver driver = new RemoteWebDriver(new URL("http://10.6.220.14:4444/wd/hub"), capability);
+
+        /*driver.get(siteBase.toString());
+        String page = driver.getPageSource();*/
+
+        /*String pathToChromeDriver = Paths.get(".\\drivers\\chromedriver.exe").toAbsolutePath().toString();
         System.setProperty("webdriver.chrome.driver", pathToChromeDriver);
-        driver = new ChromeDriver();
+        driver = new ChromeDriver();*/
 
     }
     @Test
