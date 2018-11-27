@@ -12,7 +12,7 @@
 out
 
 ### Drivers ###
-/drivers/
+#/drivers/
 
 ### IntelliJ IDEA ###
 .idea
