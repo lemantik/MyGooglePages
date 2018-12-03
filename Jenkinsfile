@@ -4,7 +4,7 @@ pipeline {
         stage('Stage 1') {
             steps {
                 echo 'Hello world!'
-                chmod +x drivers/phantomjs
+                sh 'chmod +x drivers/phantomjs'
                 sh 'clean test'
             }
         }
