@@ -1,11 +1,14 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1') {
+        stage('Grant access to files') {
             steps {
-                echo 'Hello world!'
                 sh 'chmod +x drivers/phantomjs'
                 sh 'chmod +x ./gradlew'
+            }
+        }
+        stage('Execute Gradle Tasks - clean and test') {
+            steps {
                 sh './gradlew clean test'
             }
         }
