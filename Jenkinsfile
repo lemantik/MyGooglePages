@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Hello world!'
                 sh 'chmod +x drivers/phantomjs'
-                sh 'clean test'
+                sh './gradlew clean test'
             }
         }
     }
