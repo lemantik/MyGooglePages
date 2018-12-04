@@ -20,7 +20,7 @@ public class testGooglePage {
         caps.setCapability("takesScreenshot", true);
         caps.setCapability(
                 PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-                "drivers/phantomjs.exe"
+                "drivers/phantomjs"//.exe"
         );
         driver = new PhantomJSDriver(caps);
     }
